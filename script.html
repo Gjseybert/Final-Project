@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library App</title>
+    
+    <style>
+        body {
+            background-image: url('Images/No1.jpg');
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-control {
+            border: 1px solid #999;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .btn {
+            font-size: 16px;
+        }
+
+        #bookReviews {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        textarea {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Book List</h1>
+
+        <!-- Form to add a new book -->
+        <form id="bookForm" class="mb-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" id="title" class="form-control" placeholder="Title" required>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="author" class="form-control" placeholder="Author" required>
+                </div>
+                <div class="col-md-2">
+                    <input type="number" id="year" class="form-control" placeholder="Year" required>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+                </div>
+            </div>
+        </form>
+        </form>
+
+        <!-- List of books -->
+        <ul id="bookList" class="list-group">
+            
+        </ul>
+
+        <!-- Book reviews -->
+            <h2>Book Reviews</h2>
+                <div id="bookReviews" class="mb-4">
+                <div class="form-group">
+                <label for="rating">Rating (1-5):</label>
+                <input type="number" id="rating" class="form-control" min="1" max="5" required>
+                </div>
+                <div class="form-group">
+                <label for="review">Review (up to 300 characters):</label>
+                <textarea id="review" class="form-control" rows="3" maxlength="300" required></textarea>
+                </div>
+            <button type="button" id="addReview" class="btn btn-primary">Add Review</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
